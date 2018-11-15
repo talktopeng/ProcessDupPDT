@@ -38,3 +38,27 @@ Writing objects: 100% (19/19), 9.48 KiB | 66.00 KiB/s, done.
 Total 19 (delta 4), reused 0 (delta 0)
 To K:/ProcessDupPDT.git
  * [new branch]      master -> master
+
+
+ 
+ Push to Remote
+---------------------------------
+$ git push origin master
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (19/19), 9.48 KiB | 66.00 KiB/s, done.
+Total 19 (delta 4), reused 0 (delta 0)
+To K:/ProcessDupPDT.git
+ * [new branch]      master -> master
+
+ 
+Multi Remote
+---------------------------------
+$ git remote add github https://github.com/talktopeng/ProcessDupPDT.git
+
+
+Push to ALT Remote
+---------------------------------
+$ git push github master

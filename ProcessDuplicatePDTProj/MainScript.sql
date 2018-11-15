@@ -1,89 +1,39 @@
-/*
-USE master 
-GO
-CREATE DATABASE SNAP_AIMS_UAT_DupTest
-ON
-( NAME = AIMS_Prod,
-FILENAME= 'C:\temp\SNAP_AIMS_UAT_DupTest.snap')
-AS SNAPSHOT OF AIMS_UAT
-GO
-
 SET NOCOUNT ON	
 GO
 
 USE AIMS_UAT
+--USE <DBNAME>
 GO
 
 
-IF (OBJECT_ID('dbo.Productlist') IS NOT NULL)
-	DROP TABLE dbo.Productlist
-GO
-SELECT ProductId, Name, MasterProductiD
---INTO dbo.Productlist
-FROM OPENROWSET(
-    'Microsoft.ACE.OLEDB.12.0',
-    'Excel 8.0;HDR=Yes;Database=C:\temp\MasterProductsList.xlsx',
-    'select * from [sheet1$]')
+DELETE 
+--SELECT *
+FROM dbo.ProductList 
+WHERE LEN(MasterProductid) !=36
 GO
 
 
-IF (OBJECT_ID('dbo.DeterminantList') IS NOT NULL)
-	DROP TABLE dbo.DeterminantList
-GO
-SELECT DeterminationId, Name, MasterDeterminatId MasterDeterminationId
-INTO dbo.DeterminantList
-FROM OPENROWSET(
-    'Microsoft.ACE.OLEDB.12.0',
-    'Excel 8.0;HDR=Yes;Database=C:\temp\MasterDeterminantList.xlsx',
-    'select * from [sheet1$]')
-GO
-
-IF (OBJECT_ID('dbo.Techniquelist') IS NOT NULL)
-	DROP TABLE dbo.Techniquelist
-SELECT TechniqueId, Name, MasterTechniqueId
---INTO dbo.Techniquelist
-FROM OPENROWSET(
-    'Microsoft.ACE.OLEDB.12.0',
-    'Excel 8.0;HDR=YES;Database=C:\temp\MasterTechniqueList.xlsx',
-    'select * from [sheet1$]')
-GO
-
-*/
-/*
-Clear up the imported tables
-*/
-
-
-USE AIMS_UAT
-GO
-
-delete 
--- select *
-from dbo.ProductList 
-where LEN(MasterProductid) !=36
-GO
-
-
-delete 
+DELETE 
 --select *
-from dbo.ProductList 
-where MasterProductid IS NULL 
+FROM dbo.ProductList 
+WHERE MasterProductid IS NULL 
 	OR MasterProductid ='' 
-	or productid = MasterProductid 
-	or MasterProductid NOT IN (select productid from nata.Product)
+	OR productid = MasterProductid 
+	OR MasterProductid NOT IN (select productid from nata.Product)
 
-delete 
+DELETE 
 --select *
-from dbo.DeterminantList where  LEN([MasterDeterminationID])!= 36 
+FROM dbo.DeterminantList 
+WHERE LEN([MasterDeterminationID])!= 36 
 GO
 
-delete 
+DELETE 
 --select *
-from dbo.DeterminantList 
-where  [MasterDeterminationID] IS NULL 
+FROM dbo.DeterminantList 
+WHERE  [MasterDeterminationID] IS NULL 
 	OR [MasterDeterminationID] ='' 
-	or DeterminationId = [MasterDeterminationID]
-	or [MasterDeterminationID] NOT IN (select DeterminationId from nata.Determination)
+	OR DeterminationId = [MasterDeterminationID]
+	OR [MasterDeterminationID] NOT IN (select DeterminationId from nata.Determination)
 GO
 
 delete 
@@ -104,7 +54,9 @@ GO
 Remove Circular Reference
 */
 
-delete from dbo.Productlist
+delete 
+--select
+from dbo.Productlist
 where productid in (
 	select p1.productid from dbo.ProductList p1
 	inner join dbo.ProductList p2
