@@ -15,6 +15,18 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName />
         </ConnectionNode>
+        <ConnectionNode Name="vmdbnrh87:NATA\pwang">
+          <Created>2018-11-15T13:36:28.3082274+11:00</Created>
+          <Type>SQL</Type>
+          <Server>vmdbnrh87</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
@@ -50,8 +62,8 @@
           <FullPath>MainScript.sql</FullPath>
         </FileNode>
         <FileNode Name="SanityCheck.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vmdbnrh87:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vmdbnrh87</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SanityCheck.sql</FullPath>
         </FileNode>

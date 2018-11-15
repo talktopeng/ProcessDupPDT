@@ -3,10 +3,12 @@ Date: 15/11/2018
 
 This project process duplicate Product, Determination and Technique in AIMS Database.
 
+
 Remote Repository
 --------------------------------
 pwang@SYD-PWANG3 MINGW64 /g/NATAWorks/CodeRepo/AIMSDB/ProcessDuplicatePDTSln
 $ git init /K/ProcessDupPDT.git --bare  # K: is a network drive mapping to //vmapnrh32/CodeRepo
+
 
 Initial Command
 --------------------------------
@@ -23,9 +25,10 @@ $ git commit -m "First Commit"
  create mode 100644 ProcessDuplicatePDTProj/SanityCheck.sql
  create mode 100644 ProcessDuplicatePDTSln.ssmssln
  create mode 100644 Readme.md
- 
- Push to Remote
- ---------------------------------
+
+
+Push to Remote
+---------------------------------
  $ git push origin master
 Enumerating objects: 19, done.
 Counting objects: 100% (19/19), done.
