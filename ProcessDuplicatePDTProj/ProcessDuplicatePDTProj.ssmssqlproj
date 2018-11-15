@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ProcessDuplicatePDTProj">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="vmdbnrh78:NATA\pwang">
+          <Created>2018-11-15T12:45:31.6246121+11:00</Created>
+          <Type>SQL</Type>
+          <Server>vmdbnrh78</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="CreateDBSnapshot.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vmdbnrh78:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vmdbnrh78</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CreateDBSnapshot.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CreateTableOnAIMSPROD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vmdbnrh78:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vmdbnrh78</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CreateTableOnAIMSPROD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CreateTableOnUAT.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vmdbnrh78:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vmdbnrh78</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CreateTableOnUAT.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LoadExcelFiles.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vmdbnrh78:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vmdbnrh78</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LoadExcelFiles.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MainScript.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>MainScript.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SanityCheck.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SanityCheck.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
