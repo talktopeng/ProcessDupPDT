@@ -56,14 +56,14 @@
           <FullPath>LoadExcelFiles.sql</FullPath>
         </FileNode>
         <FileNode Name="MainScript.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vmdbnrh78:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vmdbnrh78</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>MainScript.sql</FullPath>
         </FileNode>
         <FileNode Name="SanityCheck.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vmdbnrh87:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>vmdbnrh87</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vmdbnrh78:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vmdbnrh78</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SanityCheck.sql</FullPath>
         </FileNode>
